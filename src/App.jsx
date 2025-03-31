@@ -1,9 +1,15 @@
 // chart integration: https://github.com/reactchartjs/react-chartjs-2
-import "./styles/global.css";
-import NavBar from "./components/NavBar";
+import Chart from './components/ChartContainer.jsx';
+import NavBar from './components/NavBar';
+import './styles/global.css';
 
 function App() {
-  return <NavBar />;
+	return (
+		<>
+			<NavBar />;
+			<Chart />
+		</>
+	);
 }
 
 export default App;
