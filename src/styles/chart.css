@@ -1,28 +1,28 @@
 .chart_container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	width: 100%;
-	gap: 20px; /* Space between charts */
-	min-height: 200px;
-	padding: 0 2rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px; /* Space between charts */
+  min-height: 200px;
+  padding: 1rem 2rem 0 2rem;
 }
 
 .chart {
-	background-color: var(--primary-color);
-	flex: 1; /* Makes each chart take equal space */
-	height: 200px;
-	width: 300px;
-	border-radius: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background-color: var(--primary-color);
+  flex: 1; /* Makes each chart take equal space */
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	justify-content: flex-start; /* Aligns text to the left */
-	align-items: flex-start; /* Aligns text to the top */
-	padding: 1rem; /* Adds some space from the edges */
+  justify-content: flex-start; /* Aligns text to the left */
+  align-items: flex-start; /* Aligns text to the top */
+  padding: 1rem; /* Adds some space from the edges */
 
-	color: white;
-	font-size: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
 }
