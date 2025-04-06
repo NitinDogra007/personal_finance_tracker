@@ -25,6 +25,18 @@ function TableComponent({ data = [] }) {
     return <p>No data available</p>;
   }
 
+  const getRowClass = (columnId, type) => {
+    if (columnId === "type") {
+      return type?.toLowerCase() === "income" ? "type-income" : "type-expense";
+    }
+    if (columnId === "amount") {
+      return type?.toLowerCase() === "income"
+        ? "amount-income"
+        : "amount-expense";
+    }
+    return "";
+  };
+
   return (
     <div className="table-container">
       <table className="table">
@@ -46,6 +58,25 @@ function TableComponent({ data = [] }) {
         <tbody>
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
+              {row.getVisibleCells().map((cell) => {
+                // Apply the class for "type" and "amount" columns only
+                const className = getRowClass(
+                  cell.column.id,
+                  row.original.type
+                );
+                return (
+                  <td key={cell.id} className={className}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+
+        {/*<tbody>
+          {table.getRowModel().rows.map((row) => (
+            <tr key={row.id}>
               {row.getVisibleCells().map((cell) => (
                 <td key={cell.id}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -53,7 +84,7 @@ function TableComponent({ data = [] }) {
               ))}
             </tr>
           ))}
-        </tbody>
+        </tbody>*/}
       </table>
     </div>
   );

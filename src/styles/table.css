@@ -1,101 +1,121 @@
 .table-container {
-	padding: 0 2rem;
-	margin-top: 1rem;
-	max-width: 100%;
-	overflow-x: auto; /* allows smooth scroll if necessary */
-	box-sizing: border-box;
+  padding: 0 2rem;
+  margin-top: 1rem;
+  max-width: 100%;
+  overflow-x: auto; /* allows smooth scroll if necessary */
+  box-sizing: border-box;
 }
 
 .table {
-	width: 100%;
-	border-collapse: collapse;
-	border-radius: 8px;
-	overflow: hidden;
-	background-color: #1e1e1e;
-	color: #fff;
-	table-layout: fixed; /* optional: evenly distributes columns */
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  color: #fff;
+  table-layout: fixed; /* optional: evenly distributes columns */
 }
 
 .table th {
-	padding: 12px;
-	background: #333;
-	color: #fff;
-	text-align: left;
-	border-bottom: 2px solid #555;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+  padding: 12px;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-bottom: 2px solid #555;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .table td {
-	padding: 12px;
-	text-align: left;
-	border-bottom: 1px solid #444;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .table tr {
-	border-bottom: 1px solid #444;
+  border-bottom: 1px solid #444;
 }
 
 .table input,
 .table select {
-	width: 100%;
-	padding: 8px;
-	border: none;
-	border-radius: 4px;
-	font-size: 0.9rem;
-	background-color: #2a2a2a;
-	color: white;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: #2a2a2a;
+  color: white;
 }
 
 .table input::placeholder {
-	color: #aaa;
+  color: #aaa;
 }
 
 .table input:focus,
 .table select:focus {
-	outline: 2px solid #666;
-	background-color: #333;
+  outline: 2px solid #666;
+  background-color: #333;
 }
 
 /* Highlighting */
 
 /* Highlighting the "Income" and "Expense" text */
 .table td.income {
-	color: #28a745; /* Green for Income */
+  color: #28a745; /* Green for Income */
 }
 
 .table td.expense {
-	color: #f76c6c; /* Hot Pink for Expense */
+  color: #f76c6c; /* Hot Pink for Expense */
 }
 
 /* Ensure table borders and other styles remain intact */
 .table td,
 .table th {
-	padding: 12px;
-	text-align: left;
-	border-bottom: 1px solid #444;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
 }
 
 /* Optional: Add hover effect for rows */
 .table tr:hover {
-	background-color: #555;
+  background-color: #555;
 }
 
 /* Optional: Style headers */
 .table th {
-	background: #333;
-	color: #fff;
-	text-align: left;
-	border-bottom: 2px solid #555;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-bottom: 2px solid #555;
 }
 
 /* Optional: Style cells */
 .table td {
-	padding: 12px;
-	text-align: left;
-	border-bottom: 1px solid #444;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+/* highlighting */
+/* CSS for income and expense types */
+.type-income {
+  background-color: #90ee90;
+  color: #004f20;
+}
+
+.type-expense {
+  background-color: lightcoral;
+  color: #7f0000;
+}
+
+.amount-income {
+  color: #24ff24;
+}
+
+.amount-expense {
+  color: rgb(251, 0, 0);
 }
