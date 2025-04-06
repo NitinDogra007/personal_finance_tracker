@@ -8,23 +8,22 @@ import NavBar from "./components/NavBar";
 import TableComponent from "./components/TableComponent.jsx";
 import "./styles/global.css";
 
-const data = [
-  {
-    name: "Salary",
-    type: "Income",
-    category: "Job",
-    date: "2025-04-01",
-  },
-  {
-    name: "Groceries",
-    type: "Expense",
-    category: "Food",
-    date: "2025-04-02",
-  },
-  // Add more entries here
-];
-
 function App() {
+  const [data, setData] = useState([
+    {
+      name: "Salary",
+      type: "Income",
+      category: "Job",
+      date: "2025-04-01",
+    },
+    {
+      name: "Groceries",
+      type: "Expense",
+      category: "Food",
+      date: "2025-04-02",
+    },
+    // Add more entries here
+  ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function openModal() {
@@ -35,13 +34,20 @@ function App() {
     setIsModalOpen(false);
   }
 
+  // Function to add data to the table
+  function addData(formData) {
+    setData((prevData) => [...prevData, formData]);
+  }
+
   return (
     <>
       <NavBar />
       <Chart />
       <ButtonComponent title="Add Transaction" onClick={openModal} />
       <TableComponent data={data} />
-      {isModalOpen && <ModalComponent closeModal={closeModal} />}
+      {isModalOpen && (
+        <ModalComponent closeModal={closeModal} addData={addData} />
+      )}
     </>
   );
 }
