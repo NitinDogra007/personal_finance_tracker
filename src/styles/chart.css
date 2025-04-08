@@ -56,4 +56,36 @@
 	margin-top: 30px; /* Add space between the title and the chart */
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+	.chart-container {
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+	}
 
+	.chart-wrapper {
+		flex: none;
+		width: 100%;
+	}
+
+	/* Make text smaller on smaller screens */
+	.chart-wrapper h2 {
+		font-size: 1.5rem; /* Decrease font size on small screens */
+	}
+
+	.chart-wrapper.bar-chart h2 {
+		font-size: 1.5rem; /* Decrease font size on small screens */
+	}
+}
+
+/* Additional Media Query for Very Small Screens (e.g., mobile devices) */
+@media (max-width: 480px) {
+	.chart-wrapper h2 {
+		font-size: 1.2rem; /* Further reduce font size for small mobile screens */
+	}
+
+	.chart-wrapper.bar-chart h2 {
+		font-size: 1.2rem; /* Further reduce font size for small mobile screens */
+	}
+}
