@@ -49,8 +49,29 @@ function IncomeVsExpensesChart({ data }) {
 
 	return (
 		<div>
-			
-			<Bar data={chartData} />
+			<Bar
+				data={chartData}
+				options={{
+					responsive: true, // Makes the chart responsive
+					plugins: {
+						legend: {
+							position: 'right', // Moves the legend to the right of the chart
+							labels: {
+								boxWidth: 10, // Controls the width of the legend box
+								padding: 20, // Adds space between the items
+							},
+						},
+					},
+					scales: {
+						x: {
+							beginAtZero: true,
+						},
+						y: {
+							beginAtZero: true,
+						},
+					},
+				}}
+			/>
 		</div>
 	);
 }

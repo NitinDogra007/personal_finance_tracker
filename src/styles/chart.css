@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 2rem; /* Adjust space between charts */
-	margin: 2rem; /* Adjust the container's margin */
+	margin: 1rem 2rem 0rem 2rem; /* Adjust the container's margin */
 }
 
 .chart-wrapper {
@@ -17,6 +17,7 @@
 
 .chart-wrapper h2 {
 	color: #fff;
+	font-size: 2rem; /* Default font size for h2 */
 }
 
 .chart-wrapper canvas {
@@ -26,3 +27,33 @@
 	margin: 0 auto; /* Center the canvas inside its wrapper */
 	display: block; /* Remove any extra spacing around the canvas */
 }
+
+/* Apply styles only to the bar chart wrapper */
+.chart-wrapper.bar-chart {
+	display: flex;
+	flex-direction: column; /* Ensure the content is stacked vertically */
+	justify-content: center; /* Vertically center the canvas */
+	align-items: center; /* Horizontally center the canvas */
+	position: relative; /* Needed for absolute positioning of the h2 */
+	padding-top: 20px; /* Space the chart from the top */
+}
+
+/* Apply styles to the h2 element */
+.chart-wrapper.bar-chart h2 {
+	position: absolute;
+	top: 20px; /* Adjust the space from the top */
+	left: 30px; /* Adjust the space from the left */
+	color: #fff; /* Ensure the text is visible */
+	margin: 0; /* Remove any default margin */
+	font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+/* Apply styles to the bar chart canvas */
+.chart-wrapper.bar-chart canvas {
+	width: 100% !important; /* Ensure it fills the wrapper */
+	height: auto; /* Maintain aspect ratio */
+	max-width: 80%; /* Limit the max width of the canvas */
+	margin-top: 30px; /* Add space between the title and the chart */
+}
+
+

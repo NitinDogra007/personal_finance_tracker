@@ -64,11 +64,12 @@ import IncomeVsExpensesChart from './IncomeVsExpensesChart';
 function ChartContainer({ data }) {
 	return (
 		<div className="chart-container">
-			<div className="chart-wrapper">
+			<div className="chart-wrapper ">
 				<h2>Expenses By Category</h2>
 				<ExpenseByCategoryChart data={data} />
 			</div>
-			<div className="chart-wrapper">
+
+			<div className="chart-wrapper bar-chart">
 				<h2>Income Vs Expenses</h2>
 				<IncomeVsExpensesChart data={data} />
 			</div>

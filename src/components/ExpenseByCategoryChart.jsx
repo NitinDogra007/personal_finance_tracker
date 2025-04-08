@@ -53,7 +53,21 @@ function ExpenseByCategoryChart({ data }) {
 	};
 	return (
 		<div>
-			<Pie data={chartData} />
+			<Pie
+				data={chartData}
+				options={{
+					responsive: true,
+					plugins: {
+						legend: {
+							position: 'right', // Set the legend position to the right
+							labels: {
+								boxWidth: 10, // Optional: control the size of the legend box
+								padding: 20, // Optional: control the padding between items
+							},
+						},
+					},
+				}}
+			/>
 		</div>
 	);
 }
