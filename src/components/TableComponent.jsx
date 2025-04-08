@@ -1,15 +1,15 @@
 import {
 	flexRender,
 	getCoreRowModel,
-	getFilteredRowModel,
 	getSortedRowModel,
 	useReactTable,
 } from '@tanstack/react-table';
 import { useState } from 'react';
 import '../styles/table.css';
 
-function TableComponent({ data = [] }) {
+function TableComponent({ data }) {
 	const [sorting, setSorting] = useState([]);
+	// const [columnFilters, setColumnFilters] = useState([]);
 
 	const columns = [
 		{

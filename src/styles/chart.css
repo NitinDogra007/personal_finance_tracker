@@ -1,28 +1,28 @@
-.chart_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 20px; /* Space between charts */
-  min-height: 200px;
-  padding: 1rem 2rem 0 2rem;
+/* chart.css */
+
+.chart-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem; /* Adjust space between charts */
+	margin: 2rem; /* Adjust the container's margin */
 }
 
-.chart {
-  background-color: var(--primary-color);
-  flex: 1; /* Makes each chart take equal space */
-  height: 200px;
-  width: 300px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.chart-wrapper {
+	background-color: #333; /* Set a dark background */
+	border-radius: 8px; /* Round corners */
+	padding: 1.5rem; /* Add some padding inside each chart */
+	flex: 1; /* Ensure the chart fills the container equally */
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-  justify-content: flex-start; /* Aligns text to the left */
-  align-items: flex-start; /* Aligns text to the top */
-  padding: 1rem; /* Adds some space from the edges */
+.chart-wrapper h2 {
+	color: #fff;
+}
 
-  color: white;
-  font-size: 1.5rem;
+.chart-wrapper canvas {
+	width: 100% !important; /* Ensure it fills the wrapper */
+	height: auto !important; /* Maintain aspect ratio */
+	max-width: 50%; /* Limit the max width of the canvas */
+	margin: 0 auto; /* Center the canvas inside its wrapper */
+	display: block; /* Remove any extra spacing around the canvas */
 }
