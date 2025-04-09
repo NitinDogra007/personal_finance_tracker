@@ -42,9 +42,14 @@ function IncomeVsExpensesChart({ data }) {
 		labels: ['Income', 'Expenses'],
 		datasets: [
 			{
-				label: 'Amount',
-				data: [income, expenses],
-				backgroundColor: ['#36A2EB', '#FF6384'],
+				label: 'Income',
+				data: [income, 0],
+				backgroundColor: '#36A2EB',
+			},
+			{
+				label: 'Expenses',
+				data: [0, expenses],
+				backgroundColor: '#FF6384',
 			},
 		],
 	};
