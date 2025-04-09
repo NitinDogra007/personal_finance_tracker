@@ -51,8 +51,8 @@
 .chart-wrapper.bar-chart canvas {
 	width: 100% !important; /* Ensure it fills the wrapper */
 	height: auto; /* Maintain aspect ratio */
-	max-width: 80%; /* Limit the max width of the canvas */
-	margin-top: 30px; /* Add space between the title and the chart */
+	max-width: 90%; /* Limit the max width of the canvas */
+	margin-top: 80px; /* Add space between the title and the chart */
 }
 
 /* Media query for smaller screens */

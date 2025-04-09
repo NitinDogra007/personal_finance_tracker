@@ -2,6 +2,7 @@ import {
 	BarElement,
 	CategoryScale,
 	Chart as ChartJS,
+	Colors,
 	Legend,
 	LinearScale,
 	Title,
@@ -16,7 +17,8 @@ ChartJS.register(
 	Legend,
 	BarElement,
 	CategoryScale,
-	LinearScale
+	LinearScale,
+	Colors
 );
 
 function IncomeVsExpensesChart({ data }) {
@@ -40,9 +42,12 @@ function IncomeVsExpensesChart({ data }) {
 		labels: ['Income', 'Expenses'],
 		datasets: [
 			{
-				label: 'Amount ($)',
-				data: [income, expenses],
-				backgroundColor: ['#33FF57', '#FF5733'], // Green for income, Red for expenses
+				label: 'Income',
+				data: [income, 0],
+			},
+			{
+				label: 'Expenses',
+				data: [0, expenses],
 			},
 		],
 	};
@@ -59,15 +64,34 @@ function IncomeVsExpensesChart({ data }) {
 							labels: {
 								boxWidth: 10, // Controls the width of the legend box
 								padding: 20, // Adds space between the items
+								color: '#fff',
 							},
 						},
+					},
+					colors: {
+						enabled: true,
 					},
 					scales: {
 						x: {
 							beginAtZero: true,
+							stacked: true,
+							ticks: {
+								color: '#fff', // <-- X-axis tick color
+							},
+							title: {
+								display: true,
+								color: '#fff',
+							},
 						},
 						y: {
 							beginAtZero: true,
+							ticks: {
+								color: '#fff', // <-- Y-axis tick color
+							},
+							title: {
+								display: true,
+								color: '#fff',
+							},
 						},
 					},
 				}}

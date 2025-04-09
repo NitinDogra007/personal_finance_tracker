@@ -2,6 +2,7 @@ import {
 	ArcElement,
 	CategoryScale,
 	Chart as ChartJS,
+	Colors,
 	Legend,
 	LinearScale,
 	Title,
@@ -16,7 +17,8 @@ ChartJS.register(
 	Legend,
 	ArcElement,
 	CategoryScale,
-	LinearScale
+	LinearScale,
+	Colors
 );
 
 function ExpenseByCategoryChart({ data }) {
@@ -47,7 +49,6 @@ function ExpenseByCategoryChart({ data }) {
 		datasets: [
 			{
 				data: Object.values(aggregatedData),
-				backgroundColor: ['#FF5733', '#33FF57', '#3357FF'],
 			},
 		],
 	};
@@ -63,7 +64,12 @@ function ExpenseByCategoryChart({ data }) {
 							labels: {
 								boxWidth: 10, // Optional: control the size of the legend box
 								padding: 20, // Optional: control the padding between items
+								color: '#fff',
 							},
+						},
+						colors: {
+							enabled: true,
+							forceOverride: true,
 						},
 					},
 				}}

@@ -8,7 +8,12 @@ import { useState } from 'react';
 import '../styles/table.css';
 
 function TableComponent({ data }) {
-	const [sorting, setSorting] = useState([]);
+	const [sorting, setSorting] = useState([
+		{
+			id: 'date', // column accessor key
+			desc: true, // true means descending order
+		},
+	]);
 	// const [columnFilters, setColumnFilters] = useState([]);
 
 	const columns = [
@@ -119,9 +124,9 @@ function TableComponent({ data }) {
 										{header.column.getCanSort() && (
 											<span>
 												{header.column.getIsSorted() === 'asc'
-													? '🔼'
+													? ' 🔼'
 													: header.column.getIsSorted() === 'desc'
-													? '🔽'
+													? ' 🔽'
 													: ' 🔄'}
 											</span>
 										)}
