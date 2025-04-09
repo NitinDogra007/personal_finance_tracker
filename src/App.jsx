@@ -16,7 +16,11 @@ function App() {
 
 	// Function to add data to the table and persist it
 	function addData(formData) {
-		const newEntry = { id: uuidv4(), ...formData };
+		const newEntry = {
+			id: uuidv4(),
+			timestamp: Date.now(), // Adding a timestamp field
+			...formData,
+		};
 		setData((prevData) => {
 			const updatedData = [...prevData, newEntry];
 			localStorage.setItem('entries', JSON.stringify(updatedData)); // Save data to local storage

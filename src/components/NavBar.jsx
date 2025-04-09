@@ -6,7 +6,7 @@ function NavBar() {
     <header className="navbar">
       <div className="navbar__container">
         <img className="navbar__logo" src="logo.svg" alt="Budget Buddy Logo" />
-        <div>Budget Buddy</div>
+        <div className="navbar__text">Budget Buddy</div>
       </div>
       <div className="user_profile">Hi, Nitin</div>
     </header>

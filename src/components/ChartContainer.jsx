@@ -65,12 +65,12 @@ function ChartContainer({ data }) {
 	return (
 		<div className="chart-container">
 			<div className="chart-wrapper ">
-				<h2>Expenses By Category</h2>
+				<h3>Expenses By Category</h3>
 				<ExpenseByCategoryChart data={data} />
 			</div>
 
 			<div className="chart-wrapper bar-chart">
-				<h2>Income Vs Expenses</h2>
+				<h3>Income Vs Expenses</h3>
 				<IncomeVsExpensesChart data={data} />
 			</div>
 		</div>

@@ -23,3 +23,24 @@
 	width: 2.5rem; /* Adjust logo size */
 	height: auto;
 }
+
+/* Media query for smaller screens (mobile devices) */
+@media (max-width: 600px) {
+	.navbar {
+		font-size: 1.2rem; /* Reduce font size on smaller screens */
+	}
+
+	.navbar__container {
+		gap: 0.5rem; /* Less space between logo and text */
+	}
+
+	/* Keep only logo on very small screens */
+	.navbar__logo {
+		width: 2rem; /* Resize logo for smaller screens */
+	}
+
+	/* Optional: Further reduce padding if needed */
+	.navbar {
+		padding: 1rem; /* Less padding on small screens */
+	}
+}
